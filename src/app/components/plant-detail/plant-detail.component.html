@@ -1,14 +1,13 @@
-<div class="card" style="width: 30rem;">
-  <img src="{{selectedPlant.img}}" class="card-img-top" alt="...">
+<div class="card p-2" style="width: 40vw">
+  <img src="{{ selectedPlant.img }}" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">{{selectedPlant.name}}</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A nulla illum
+    <h5 class="card-title">{{ selectedPlant.name }}</h5>
+    <p class="card-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. A nulla illum
       mollitia accusamus ad, eveniet dolore perspiciatis. Nulla culpa, tempore
       consectetur iste officia, laborum, cupiditate veritatis exercitationem
-      deleniti saepe eligendi.</p>
+      deleniti saepe eligendi.
+    </p>
     <button (click)="closePage()" class="btn btn-primary">Acquista</button>
   </div>
 </div>
-
-
-
