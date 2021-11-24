@@ -1,21 +1,3 @@
-/* img {
-  border-radius: 5px;
-}
-
-.card {
-  border-radius: 15px;
-  background-color: #4e7e5d;
-  box-shadow: 2px 5px 5px 3px grey;
-}
-.container {
-  margin: 0;
-  padding: 0;
-}
-
-img{
-  width: 18.75rem;
-  height: 12.5rem;
-} */
 
 .card{
   box-shadow: 2px 5px 5px 2px grey;
@@ -28,4 +10,8 @@ img:hover {
 
 .bottone{
   border-radius: 20px;
+}
+img{
+  height: 15vw;
+  object-fit: contain;
 }

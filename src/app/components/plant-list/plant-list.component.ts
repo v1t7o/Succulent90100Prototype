@@ -10,13 +10,12 @@ import { DataServiceService } from 'src/app/service/data-service.service';
 })
 export class PlantListComponent implements OnInit {
   plantList!: Icard[]
-  @Output() eventSelect = new EventEmitter<Icard>();
-  @Input() trowBack!: boolean;
-  @Output() backToParent = new EventEmitter();
+ /*  @Input() trowBack!: boolean; */
+ /*  @Output() backToParent = new EventEmitter(); */
   selectedPlant!: Icard;
+  open:boolean = false;
 
-
-  constructor(private plantService: DataServiceService) {}
+  constructor(public plantService: DataServiceService) {}
 
   ngOnInit(): void {
     this.plantList = this.plantService.getAll();
@@ -24,11 +23,14 @@ export class PlantListComponent implements OnInit {
 
   dettaglio(plant: Icard) {
     this.selectedPlant = this.plantService.get(plant.id);
-    this.eventSelect.emit(plant);
-    console.log(plant)
+    this.open = true
   }
 
-  back() {
+/*   back() {
     this.backToParent.emit();
+  } */
+
+  close() {
+    this.open = false;
   }
 }

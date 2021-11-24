@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PLANT } from 'src/app/dataMok';
 import { Icard } from 'src/app/interface';
 import { DataServiceService } from 'src/app/service/data-service.service';
@@ -11,7 +11,7 @@ import { DataServiceService } from 'src/app/service/data-service.service';
 })
 export class PlantDetailComponent implements OnInit {
 @Input() selectedPlant!: Icard;
-
+@Output() close = new EventEmitter;
   constructor() {
 
   }
@@ -19,5 +19,7 @@ export class PlantDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  closePage() {
+    this.close.emit()
+  }
 }

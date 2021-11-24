@@ -69,7 +69,7 @@ export class DataServiceService {
    return this.plant;
   }
 
-  get(id:number) {
+  get(id:number): Icard {
     return this.plant.find(plant => plant.id === id) as Icard
   }
 
